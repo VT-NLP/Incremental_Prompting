@@ -37,9 +37,9 @@ class MAVENPreprocess(object):
 
     def __init__(self, root, tokenizer, label_start_offset=1, max_length=512, expand_context=False, split_valid=True):
         super().__init__()
-        train_file = os.path.join(root, "train_split.jsonl")
-        dev_file = os.path.join(root, "dev_split.jsonl")
-        test_file = os.path.join(root, "test_v.jsonl")
+        train_file = os.path.join(root, "train.jsonl")
+        dev_file = os.path.join(root, "dev.jsonl")
+        test_file = os.path.join(root, "test.jsonl")
         self.tokenizer = tokenizer
         self.max_length = max_length
         self.expand_context = expand_context
