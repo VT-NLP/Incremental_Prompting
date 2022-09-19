@@ -15,11 +15,11 @@ tqdm==4.62.3
 
 ### Data Preparation
 - We use the ACE and MAVEN datasets for evaluation. Please note that ACE is not publicly released and requires a license to access.
-- For MAVEN dataset, download the json files under
+- First download the dataset files under the following directory with specified file names:
 ```
-./data/MAVEN/
+./data/{DATASET_NAME}/{DATASET_SPLIT}.json
 ```
-
+where `DATASET_NAME = \[MAVEN, ACE\], DATASET_SPLIT = \[train, dev, test\]`
 
 ### Training & Evaluation
 Run the following script to start training. The script will also periodically evaluate the model on dev and test set.
