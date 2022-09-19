@@ -17,9 +17,9 @@ tqdm==4.62.3
 - We use the ACE and MAVEN datasets for evaluation. Please note that ACE is not publicly released and requires a license to access.
 - First download the dataset files under the following directory with specified file names:
 ```
-./data/{DATASET_NAME}/{DATASET_SPLIT}.json
+./data/{DATASET_NAME}/{DATASET_SPLIT}.jsonl
 ```
-where `DATASET_NAME = {MAVEN, ACE}, DATASET_SPLIT = {train, dev, test}`. Please make sure you have downloaded the files on all three splits.
+- Here `DATASET_NAME = {MAVEN, ACE}, DATASET_SPLIT = {train, dev, test}`. Please make sure you have downloaded the files on all three splits. Also note that you need to preprocess the ACE dataset into the same format as MAVEN.
 - Then run the follow script to preprocess the datasets:
 ```
 python prepare_inputs.py
