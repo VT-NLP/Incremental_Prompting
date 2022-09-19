@@ -1,7 +1,7 @@
 # Incremental Prompting
 
 ### Introduction
-This is the official repository for the paper "Incremental Prompting: Episodic Memory Prompt for Lifelong Event Detection" (COLING'22). More details on code will be released soon. 
+This is the official repository for the paper "[Incremental Prompting: Episodic Memory Prompt for Lifelong Event Detection](https://arxiv.org/pdf/2204.07275.pdf)" (COLING'22). More details on code will be released soon. 
 
 ### Basic Requirements
 - Please make sure you have installed the following packages in your environment:
