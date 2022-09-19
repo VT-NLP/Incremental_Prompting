@@ -31,7 +31,7 @@ python prepare_inputs.py
 The script will generate preprocessed files under the corresponding dataset directory.
 
 ### Training & Evaluation
-- First create a directory`./logs/` which will stored the model checkpoints. 
+- First create a directory`./logs/` which will stored the model checkpoints, and `./log/ which will stored log files. 
 - Run the following script to start training. The script will also periodically evaluate the model on dev and test set.
 ```
 python run.py
