@@ -260,33 +260,7 @@ def main():
                     termination = True
                 else:
                     learned_labels = learned_labels.union(set(stage_labels[loader_id]))
-                    if opts.kt:
-                        next_exemplar = model.set_exemplar(exemplar_loaders[loader_id], output_only=True)
-                        next_frequency = {}
-                        indices = loaders[loader_id].dataset.label2index
-                        for label in stage_labels[loader_id]:
-                            if label != 0:
-                                next_frequency[label] = indices[label]
-                        if opts.kt2:
-                            next_inits = model.initialize2(
-                                exemplar=next_exemplar,
-                                ninstances=next_frequency,
-                                gamma=opts.kt_gamma,
-                                tau=opts.kt_tau,
-                                alpha=opts.kt_alpha,
-                                delta=opts.kt_delta)
-                        else:
-                            next_inits = model.initialize(
-                                exemplar=next_exemplar,
-                                ninstances=next_frequency,
-                                gamma=opts.kt_gamma,
-                                tau=opts.kt_tau,
-                                alpha=opts.kt_alpha)
-                        torch.save(model.outputs["new2old"], os.path.join(opts.log_dir, f"{loader_id}_to_{loader_id-1}"))
-                        model.extend(next_inits)
-                        assert model.nslots == max(learned_labels) + 1
-                    else:
-                        model.nslots = max(learned_labels) + 1
+                    model.nslots = max(learned_labels) + 1
                 worker.epoch = 0
                 best_dev = None; best_test = None
     print("-----------Dev Results----------")
