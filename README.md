@@ -4,13 +4,17 @@
 This is the official repository for the paper "Incremental Prompting: Episodic Memory Prompt for Lifelong Event Detection" (COLING'22). More details on how to use the code are releasing soon. 
 
 ### Basic Requirements
-Please make sure you have installed the following packages in your environment:
+- Please make sure you have installed the following packages in your environment:
 ```
 transformers==4.18.0
 torch==1.7.1
 torchmeta==1.8.0
 numpy==1.19.5
 tqdm==4.62.3
+```
+- You can install the requirements via running:
+```
+pip install -r requirements.txt
 ```
 
 ### Data Preparation
