@@ -19,7 +19,7 @@ tqdm==4.62.3
 ```
 ./data/{DATASET_NAME}/{DATASET_SPLIT}.json
 ```
-where `DATASET_NAME = {MAVEN, ACE}, DATASET_SPLIT = {train, dev, test}`. Please make sure you have downloaded the files on all three splits at the same time.
+where `DATASET_NAME = {MAVEN, ACE}, DATASET_SPLIT = {train, dev, test}`. Please make sure you have downloaded the files on all three splits.
 - Then run the follow script to preprocess the datasets:
 ```
 python prepare_inputs.py
