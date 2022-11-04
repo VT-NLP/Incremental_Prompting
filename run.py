@@ -128,7 +128,7 @@ def main():
             elif opts.balance == "mul":
                 train_loss = lambda batch:model.forward(batch, exemplar=True, mul_distill=True, exemplar_distill=True, distill=True, tau=0.5, task_id=loader_id)
             else:
-                train_loss = lambda batch:model.forward(batch, exemplar=exemplar_flag, exemplar_distill=True, distill=True, feature_distill=True, tau=0.5, task_id=loader_id)
+                train_loss = lambda batch:model.forward(batch, exemplar=exemplar_flag, exemplar_distill=True, distill=False, feature_distill=True, tau=0.5, task_id=loader_id)
             epoch_loss, epoch_metric = worker.run_one_epoch(
                 model=model,
                 f_loss=train_loss,
