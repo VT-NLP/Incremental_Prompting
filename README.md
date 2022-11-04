@@ -40,11 +40,18 @@ python run.py
 ### Reference
 **Please consider citing our paper if find it useful or interesting.**
 ```
-@inproceedings{liu2022incremental,
-    title={Incremental Prompting: Episodic Memory Prompt for Lifelong Event Detection},
-    author={Liu, Minqian and Chang, Shiyu and Huang, Lifu},
-    booktitle={Proceedings of the 29th International Conference On Computational Linguistics},  
-    year={2022}
+@inproceedings{liu-etal-2022-incremental,
+    title = "Incremental Prompting: Episodic Memory Prompt for Lifelong Event Detection",
+    author = "Liu, Minqian  and
+      Chang, Shiyu  and
+      Huang, Lifu",
+    booktitle = "Proceedings of the 29th International Conference on Computational Linguistics",
+    month = oct,
+    year = "2022",
+    address = "Gyeongju, Republic of Korea",
+    publisher = "International Committee on Computational Linguistics",
+    url = "https://aclanthology.org/2022.coling-1.189",
+    pages = "2157--2165",
 }
 ```
 
