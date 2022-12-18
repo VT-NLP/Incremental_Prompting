@@ -224,7 +224,7 @@ class PromptNet(MetaModule):
         return prompt_list
 
     def forward(self, batch, nslots: int = -1, exemplar: bool = False, exemplar_distill: bool = False,
-                feature_distill: bool = True, mul_distill=False, distill: bool = False, return_loss: bool = True,
+                feature_distill: bool = False, mul_distill=False, distill: bool = False, return_loss: bool = True,
                 return_feature: bool = False, tau: float = 1.0, log_outputs: bool = True, params=None, task_id: int = 0,
                 store: bool = False):
 
@@ -337,10 +337,11 @@ class PromptNet(MetaModule):
                         torch.softmax(old_scores * tau, dim=1) * torch.log_softmax(new_scores * tau, dim=1),
                         dim=1).mean()
                 if feature_distill:
-                    loss_distill = (1 - (
+                    loss_f_distill = (1 - (
                                 old_inputs / old_inputs.norm(dim=-1, keepdim=True) * inputs / inputs.norm(dim=-1,
                                                                                                           keepdim=True)).sum(
                         dim=-1)).mean(dim=0)
+                    loss_distill += loss_f_distill
 
                 d_weight = self.history["nslots"]
                 c_weight = (self.nslots - self.history["nslots"])
