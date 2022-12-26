@@ -37,6 +37,8 @@ The script will generate preprocessed files under the corresponding dataset dire
 python run.py
 ```
 
+- To run different task permutations, modify the `perm-id` argument in `utils/options.py`. The valid values are \[0, 1, 2, 3, 4\].
+
 ### Reference
 **Please consider citing our paper if find it useful or interesting.**
 ```
