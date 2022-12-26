@@ -22,7 +22,7 @@ def define_arguments(parser):
     parser.add_argument('--decay', type=float, default=1e-2, help="")
     parser.add_argument('--tau', type=float, default=0.5, help="")
     parser.add_argument('--seed', type=int, default=2147483647, help="random seed")
-    parser.add_argument('--perm-id', type=int, default=0, help="")
+    parser.add_argument('--perm-id', type=int, default=0, help="choose which task permutation to run")
     parser.add_argument('--save-model', type=str, default="emp", help="checkpoints name")
     parser.add_argument('--load-model', type=str, default="emp", help="path to saved checkpoint")
     parser.add_argument('--log-dir', type=str, default="./logs/emp/", help="path to save log file")
