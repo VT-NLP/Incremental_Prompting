@@ -313,7 +313,7 @@ class PromptNet(MetaModule):
             if distill and self.history is not None and self.iter_cnt % self.period == 0:
                 old_scores, old_inputs = self.forward(batch, nslots=self.history["nslots"], return_loss=False,
                                                       log_outputs=False, return_feature=True,
-                                                      params=self.history["params"])
+                                                      params=self.history["params"], task_id=task_id)
                 self.iter_cnt -= 1
                 old_scores = old_scores.detach()
                 old_inputs = old_inputs.detach()
